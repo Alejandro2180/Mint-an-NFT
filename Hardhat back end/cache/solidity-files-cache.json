@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/contracts/libraries/Base64.sol": {
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/contracts/libraries/Base64.sol": {
       "lastModificationDate": 1647303020992,
       "contentHash": "26f9dcf88ed4b6d37ce96d1caf755cbe",
       "sourceName": "contracts/libraries/Base64.sol",
@@ -36,9 +36,9 @@
         "Base64"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/contracts/MyEpicNFT.sol": {
-      "lastModificationDate": 1647306377114,
-      "contentHash": "d2f562f21cce54fe184bb2440d28d639",
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/contracts/MyEpicNFT.sol": {
+      "lastModificationDate": 1648083206605,
+      "contentHash": "901d2f8de4af37c58e8a72e787bd606a",
       "sourceName": "contracts/MyEpicNFT.sol",
       "solcConfig": {
         "version": "0.8.1",
@@ -67,6 +67,7 @@
         "@openzeppelin/contracts/utils/Strings.sol",
         "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
         "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
         "hardhat/console.sol",
         "./libraries/Base64.sol"
       ],
@@ -77,8 +78,8 @@
         "MyEpicNFT"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1647223426402,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1647992687789,
       "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -112,8 +113,8 @@
         "Strings"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
-      "lastModificationDate": 1647223426383,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
+      "lastModificationDate": 1647992686970,
       "contentHash": "580a443491d9d70eb064b0130fc3cd01",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
       "solcConfig": {
@@ -149,8 +150,8 @@
         "ERC721URIStorage"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1647223426371,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1647992686273,
       "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
       "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
       "solcConfig": {
@@ -184,8 +185,8 @@
         "Counters"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1647223055422,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1647992691262,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -219,8 +220,8 @@
         "console"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1647223426381,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1647992686841,
       "contentHash": "49295810dc45f300e5f84b4b50d88a59",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -262,8 +263,8 @@
         "ERC721"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1647223426395,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1647992687442,
       "contentHash": "27d219ec6f69478d065fdbfa7931da68",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -299,8 +300,8 @@
         "IERC721"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1647223426396,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1647992687491,
       "contentHash": "592df588492d45fdcf46b3cb608c0fbf",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -334,8 +335,8 @@
         "IERC721Receiver"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1647223426396,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1647992687477,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -371,8 +372,8 @@
         "IERC721Metadata"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1647223426369,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1647992686148,
       "contentHash": "ad714a6368ee7d43cded6bbe8af0b155",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -406,8 +407,8 @@
         "Address"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1647223426371,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1647992686263,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -441,8 +442,8 @@
         "Context"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1647223426376,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1647992686572,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -478,8 +479,8 @@
         "ERC165"
       ]
     },
-    "/Users/alecjohnson/Desktop/Personal Projects/epic-nfts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1647223426393,
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1647992687355,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -511,6 +512,43 @@
       ],
       "artifacts": [
         "IERC165"
+      ]
+    },
+    "/Users/alecjohnson/Desktop/Personal Projects/Mint-an-NFT/Hardhat back end/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1647992687641,
+      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
       ]
     }
   }

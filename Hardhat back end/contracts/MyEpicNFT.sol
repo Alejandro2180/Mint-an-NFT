@@ -5,68 +5,41 @@ pragma solidity ^0.8.1;
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
 import { Base64 } from "./libraries/Base64.sol";
 
-contract MyEpicNFT is ERC721URIStorage {
+contract MyEpicNFT is ERC721URIStorage, Ownable {
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    mapping(address => uint256) public addressMinted;
 
-    string baseSvg = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
-
-    string[] firstWords = ["Notable", "Wonderful", "Silly", "Heroic", "Tasteful", "Elastic", "Noble", "Gentle", "Smart", "Kind", "Nasty", "Smelly", "Horrible", "Quiet", "Lethal"];
-    string[] secondWords = ["Hairy", "Giant", "Tiny", "Furry", "Mr", "Mrs", "Deadly", "Distant", "Hopeful", "Ruined", "Broke", "Wealthy", "Popular"];
-    string[] thirdWords = ["Kingsman", "Pineapple", "Kerchow", "Kiwi", "Balloon", "Puppet", "Singer", "Queen", "Juggler", "Ninja", "Pilot", "Vlogger", "Fugitive"];
+    
+    string url = "https://alecjohnson.info/wp-content/uploads/2022/03/Alec_NFT-scaled.jpg";
 
     event NewEpicNFTMinted(address sender, uint256 tokenId);
 
-    constructor() ERC721 ("SquaredNFT", "SQUARE") {
-        console.log("This is my NFT contract. Whao!");
-    }
-
-    function pickRandomFirstWord(uint256 tokenId) public view returns (string memory) {
-        uint256 rand = random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
-        rand = rand % firstWords.length;
-        return firstWords[rand];
-    }
-
-    function pickRandomSecondWord(uint256 tokenId) public view returns (string memory) {
-        uint256 rand = random(string(abi.encodePacked("SECOND_WORD", Strings.toString(tokenId))));
-        rand = rand % secondWords.length;
-        return secondWords[rand];
-    }
-
-    function pickRandomThirdWord(uint256 tokenId) public view returns (string memory) {
-        uint256 rand = random(string(abi.encodePacked("THIRD_WORD", Strings.toString(tokenId))));
-        rand = rand % thirdWords.length;
-        return thirdWords[rand];
-    }
-
-    function random(string memory input) internal pure returns (uint256) {
-        return uint256(keccak256(abi.encodePacked(input)));
+    constructor() ERC721 ("AlecJohnsonNFT", "AlecJohnson") {
+        console.log("This is my NFT contract!");
     }
 
     function makeAnEpicNFT() public {
+
+        require(addressMinted[msg.sender] < 1, "You're wallet address has already minted one of my NFTs! Only 1 per person please ;)");
+        addressMinted[msg.sender] = 1;
         uint256 newItemId = _tokenIds.current();
-
-        string memory first = pickRandomFirstWord(newItemId);
-        string memory second = pickRandomSecondWord(newItemId);
-        string memory third = pickRandomThirdWord(newItemId);
-        string memory combinedWord = string(abi.encodePacked(first, second, third));
-
-        string memory finalSvg = string(abi.encodePacked(baseSvg, combinedWord, "</text></svg>"));
 
         string memory json = Base64.encode(
             bytes(
                 string(
                     abi.encodePacked(
-                        '{"name": "',
-                        combinedWord,
-                        '", "description": "A highly acclimed collection of 3 word squares.", "image" : "data:image/svg+xml;base64,',
-                        Base64.encode(bytes(finalSvg)),
-                        '"}'
+                        '{',
+                            '"name": "AlecJohnson#', Strings.toString(newItemId), '",',
+                            '"description": "Hi I', "'", 'm Alec! Thank you for minting my NFT. I hope it serves as a token of our connection in this crazy world of web3. Please feel free to reach out to me anytime on twitter @AlecJohnsonDev or on my website www.alecjohnson.info. Cheers!",',
+                            '"image" : "', url, '"',
+                        '}'
                     )
                 )
             )
