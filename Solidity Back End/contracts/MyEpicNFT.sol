@@ -27,7 +27,7 @@ contract MyEpicNFT is ERC721URIStorage, Ownable {
 
     function makeAnEpicNFT() public {
 
-        require(addressMinted[msg.sender] < 1, "You're wallet address has already minted one of my NFTs! Only 1 per person please ;)");
+        require(addressMinted[msg.sender] < 1, "Your wallet address has already minted one of my NFTs! Only 1 per person please ;)");
         addressMinted[msg.sender] = 1;
         uint256 newItemId = _tokenIds.current();
 
